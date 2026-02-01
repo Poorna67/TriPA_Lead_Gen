@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+
+<!-- SEO -->
+<title>TriPA Lead Gen Pros | Built by Three. Focused on Outcomes.</title>
+<meta name="description" content="TriPA Lead Gen Pros helps B2B & B2C companies grow with lead generation, data enrichment, email marketing, and appointment setting.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#0a0a0a;
+  --muted:#6b6b6b;
+  --g1:#16a34a;
+  --g2:#60a5fa;
+  --g3:#facc15;
+}
+
+body.dark{
+  --bg:#0b0b0b;
+  --text:#f5f5f5;
+  --muted:#9b9b9b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.4s;
+  overflow-x:hidden;
+}
+
+/* ===== BACKGROUND ===== */
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(22,163,74,.25), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(96,165,250,.25), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(250,204,21,.25), transparent 40%);
+  animation:bgMove 18s ease-in-out infinite alternate;
+}
+@keyframes bgMove{to{filter:blur(10px);}}
+
+/* ===== HEADER (SPECIAL) ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:26px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:
+    linear-gradient(90deg,
+      rgba(22,163,74,.15),
+      rgba(96,165,250,.15),
+      rgba(250,204,21,.15));
+  backdrop-filter:blur(14px);
+  z-index:20;
+}
+
+.logo img{height:78px;}
+
+nav a{
+  margin:0 16px;
+  text-decoration:none;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* TOGGLE */
+.toggle{
+  width:54px;height:28px;
+  background:#ccc;
+  border-radius:40px;
+  position:relative;
+  cursor:pointer;
+}
+.toggle span{
+  position:absolute;
+  width:22px;height:22px;
+  background:#fff;
+  border-radius:50%;
+  top:3px;left:3px;
+  transition:.3s;
+}
+body.dark .toggle{background:#444;}
+body.dark .toggle span{left:29px;}
+
+/* SECTIONS */
+section{
+  padding:160px 6%;
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+section.show{opacity:1;transform:none;}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+
+h1{
+  font-size:clamp(3.5rem,8vw,6.5rem);
+  font-weight:900;
+}
+
+.hero p{
+  margin-top:24px;
+  font-size:1.2rem;
+  color:var(--muted);
+  max-width:520px;
+}
+
+h2{
+  font-size:clamp(2.4rem,5vw,3.8rem);
+  font-weight:900;
+}
+
+/* ===== SHARED CARDS ===== */
+.cards{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+}
+
+.card{
+  padding:36px;
+  border-radius:18px;
+  background:rgba(255,255,255,.75);
+  transform-style:preserve-3d;
+  transition:.3s;
+  text-align:center;
+}
+body.dark .card{background:rgba(0,0,0,.35);}
+
+.card small{
+  display:block;
+  margin-top:12px;
+  color:var(--muted);
+}
+
+/* ===== PROCESS FLOW ===== */
+.process-flow{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:80px;
+}
+
+.arrow{
+  font-size:2rem;
+  opacity:.6;
+  animation:arrowMove 1.6s infinite alternate;
+}
+
+@keyframes arrowMove{
+  from{transform:translateX(0);}
+  to{transform:translateX(10px);}
+}
+
+/* ===== CLIENT CASE STUDIES ===== */
+.case small{
+  margin-top:10px;
+  display:block;
+}
+
+/* TEAM */
+.team{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:60px;
+}
+
+/* FOOTER */
+footer{
+  padding:80px 6%;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:900px){
+  nav{display:none;}
+  .logo img{height:60px;}
+  .process-flow{flex-direction:column;}
+  .arrow{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <div class="logo">
+    <img src="TriPA_logo.webp" alt="TriPA Logo">
+  </div>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#process">Process</a>
+    <a href="#clients">Clients</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="toggle" id="toggle"><span></span></div>
+</header>
+
+<section class="hero show">
+  <div>
+    <h1>Built by three.<br>Focused on outcomes.</h1>
+    <p>We design growth that works.</p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Market Research<small>High-intent prospect discovery.</small></div>
+    <div class="card">Lead Qualification<small>Sales-ready leads.</small></div>
+    <div class="card">Data Enrichment<small>Clean & accurate data.</small></div>
+    <div class="card">Email Marketing<small>Campaigns that convert.</small></div>
+    <div class="card">Appointment Setting<small>Meetings booked directly.</small></div>
+    <div class="card">Software Development<small>Growth-focused websites.</small></div>
+  </div>
+</section>
+
+<section id="industries">
+  <h2>Industries We Serve</h2>
+  <div class="cards">
+    <div class="card">Technology</div>
+    <div class="card">Healthcare</div>
+    <div class="card">AEC</div>
+    <div class="card">Real Estate</div>
+    <div class="card">Manufacturing</div>
+    <div class="card">Financing</div>
+    <div class="card">Professional Services</div>
+    <div class="card">All B2B & B2C</div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>Our Process</h2>
+  <div class="process-flow">
+    <div class="card">Research</div>
+    <div class="arrow">→</div>
+    <div class="card">Qualification</div>
+    <div class="arrow">→</div>
+    <div class="card">Enrichment</div>
+    <div class="arrow">→</div>
+    <div class="card">Delivery</div>
+  </div>
+</section>
+
+<section id="clients">
+  <h2>Client Case Studies</h2>
+  <div class="cards">
+    <div class="card case">
+      <img src="client_1.jpg" alt="Client" style="max-width:140px">
+      <small>Outbound + enrichment system that increased qualified meetings.</small>
+    </div>
+    <div class="card case">
+      <img src="Client_2.jpg" alt="Client" style="max-width:140px">
+      <small>Email campaigns + lead qualification for B2B growth.</small>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <h2>Our Team</h2>
+  <div class="team">
+    <div class="card">
+      <strong>Teja Ande</strong>
+      <small>Founder</small>
+    </div>
+    <div class="card">
+      <strong>Anand</strong>
+      <small>Co-Founder</small>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>tripaleadgenpros@gmail.com</p>
+  <p>8074581554 · 7075467940</p>
+</section>
+
+<footer>
+  © 2026 TriPA Lead Gen Pros — Bangalore, India
+</footer>
+
+<script>
+/* Toggle */
+document.getElementById("toggle").onclick=()=>{
+  document.body.classList.toggle("dark");
+};
+
+/* Scroll reveal */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight-120){
+      sec.classList.add("show");
+    }
+  });
+});
+
+/* 3D hover */
+document.querySelectorAll(".card").forEach(card=>{
+  card.addEventListener("mousemove",e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)/12;
+    const y=(e.clientY-r.top-r.height/2)/12;
+    card.style.transform=`rotateY(${x}deg) rotateX(${-y}deg)`;
+  });
+  card.addEventListener("mouseleave",()=>{
+    card.style.transform="rotateX(0) rotateY(0)";
+  });
+});
+</script>
+
+</body>
+</html>
